@@ -10,7 +10,7 @@
 
 3.	进阶教程：如何将文件和文件夹上传至 S3 存储桶？https://docs.aws.amazon.com/zh_cn/AmazonS3/latest/user-guide/upload-objects.html
 
-4、Amazon S3 + Amazon CloudFront: 云中的绝妙搭配，存储和加速内容，同时提高安全性并降低成本：
+4.	Amazon S3 + Amazon CloudFront: 云中的绝妙搭配，存储和加速内容，同时提高安全性并降低成本：
 https://aws.amazon.com/cn/blogs/china/amazon-s3-amazon-cloudfront-%E4%BA%91%E4%B8%AD%E7%9A%84%E7%BB%9D%E5%A6%99%E6%90%AD%E9%85%8D/
 
 
@@ -66,8 +66,10 @@ multipart(REST API): https://docs.aws.amazon.com/AmazonS3/latest/API/mpUploadIni
 
 
 补充：
-1）	vue 前端项目上传文件到AWS Amazon S3 存储桶（此方法直接通过 Upload 方法上传文件，存在安全隐患，AKSK有暴露风险。AKSK请务必只给S3的权限）：https://blog.chensihang.cn/Vue%20%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0AWS%20S3/
-2）	vue + axios 通过 S3 预签名地址上传文件（相比上面的方案消除了AKSK暴露风险，普遍做法是后端提供文件上传预签名地址，前端根据预签名地址进行文件上传操作）：
+
+9. vue 前端项目上传文件到AWS Amazon S3 存储桶（此方法直接通过 Upload 方法上传文件，存在安全隐患，AKSK有暴露风险。AKSK请务必只给S3的权限）：https://blog.chensihang.cn/Vue%20%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%88%B0AWS%20S3/
+
+10. vue + axios 通过 S3 预签名地址上传文件（相比上面的方案消除了AKSK暴露风险，普遍做法是后端提供文件上传预签名地址，前端根据预签名地址进行文件上传操作）：
 https://blog.csdn.net/createNo_1/article/details/114268110
 
 
@@ -120,15 +122,16 @@ AWS_PROFILE=develop aws s3api list-parts --bucket [bucket_name] --key [key] --up
 
 
 
-### （4）S3直接作为本地盘操作（运维角度）
+## （4）S3直接作为本地盘操作（运维角度）
 
 •	可以利用S3fs在Amazon EC2 Linux实例上挂载S3存储桶，S3fs是基于FUSE的文件系统，允许Linux和Mac Os X 挂载S3的存储桶在本地文件系统，S3fs能够保持对象原来的格式。教程如下：https://aws.amazon.com/cn/blogs/china/s3fs-amazon-ec2-linux/
 
 •	aws云上快速搭建 NFS，File Gateway文件网关提供了一个文件接口，让您可以使用行业标准 NFS 文件协议将文件作为对象存储在 Amazon S3 中，并通过 NFS 从您的数据中心或 Amazon EC2 访问这些文件：https://aws.amazon.com/cn/blogs/china/how-to-establish-nfs/
 
-•	
 
 
+## 引用：
 
+1） AWS S3 上传下载工具 - 配置与使用指南(**适用于MAC版本的S3 cyberduck配置指南**]) https://github.com/liangyimingcom/AWS-S3-upload-and-download-tool-configuration-and-usage-guide_available-for-AWS-China/blob/readme-edits/README.md
 
-
+2）世界上最简单的S3命令行说明(文件备份与恢复) The simplest S3 command line guide in the world for Files Backup/Restore https://github.com/liangyimingcom/The-simplest-S3-command-line-guide-in-the-world-for-Files-Backup-Restore
